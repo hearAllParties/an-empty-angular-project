@@ -8,6 +8,8 @@ var ms = angular.module('ms', [
     'ms.controllers'
 ]);
 
+console.log('angular version ' + angular.version.full);
+
 ms.value('userName', 'Eugene');//全局变量
 /*ms.config(['$routeProvider', function($routeProvider) {
  //TemplateURl相对于index.html路径
@@ -34,7 +36,7 @@ ms.constant('app', {}).run(['app', '$injector', '$rootScope', function (app, $in
         get: $injector.get('http').get,
         msApi: $injector.get('msApi'),
         goToAnchor: $injector.get('goToAnchor')
-    })
+    });
 }]);
 
 ms.config(function ($routeProvider, $locationProvider) {

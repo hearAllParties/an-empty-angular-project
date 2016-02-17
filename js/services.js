@@ -5,11 +5,9 @@
 
 var msServices = angular.module('ms.services', []);
 
-msServices.factory('msApi', ['$injector', function($injector){
+msServices.factory('msApi', ['$injector', function ($injector) {
     var $interpolate = $injector.get('$interpolate');
-    var apiStore = {
-
-    };
+    var apiStore = {};
     return function msApi(name, id) {
         var api = apiStore[name];
         if (api) {
@@ -37,6 +35,7 @@ msServices.factory('http', ['$http', '$timeout', function ($http, $timeout) {
                 });
         }
     }
+
     return {
         httpFactory: httpFactory,
         get: httpFactory('get'),
